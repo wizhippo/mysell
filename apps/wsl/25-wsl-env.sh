@@ -32,7 +32,10 @@ if [ ! -z "CLIENT_IP" ] && [ "$CLIENT_IP" != "$WSL_CLIENT_IP" ]; then
 fi
 
 if [ "$HAS_CHANGE" != "no" ]; then
-    echo "Updating WSL env"
-    export DISPLAY=$WSL_HOST_IP:0.0
-    powershell.exe -File $HOME/.dotfiles/apps/wsl/wsl-x410.ps1 -HostIP $WSL_HOST_IP -ClientIP $WSL_CLIENT_IP
+    # WSLg installed not needed
+    if [ "$XDG_RUNTIME_DIR" != "/mnt/wslg/runtime-dir" ]; then
+        echo "Updating WSL display env"
+        export DISPLAY=$WSL_HOST_IP:0.0
+        powershell.exe -File $HOME/.dotfiles/apps/wsl/wsl-x410.ps1 -HostIP $WSL_HOST_IP -ClientIP $WSL_CLIENT_IP
+    fi
 fi
