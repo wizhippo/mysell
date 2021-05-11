@@ -1,0 +1,6 @@
+
+- create:
+    - ~/.config/gtk-3.0
+
+- link:
+    ~/.config/gtk-3.0/settings.ini: apps/gtk-3.0/settings.ini

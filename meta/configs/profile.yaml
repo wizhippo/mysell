@@ -3,7 +3,7 @@
     - ~/.local/etc/profile.d
 
 - shell:
-    - ['sudo apt install git curl gnome-keyring dbus-x11 libsecret-tools fzf tmux', Install deps]
+    - ['sudo apt install git curl libsecret-tools fzf tmux', Install deps]
 
 - link:
     ~/.profile: shells/profile

@@ -1,0 +1,4 @@
+# https://www.jetbrains.com/toolbox-app/download/download-thanks.html?platform=linux
+
+- shell:
+    - ['sudo apt install libgbm1', Install deps]
