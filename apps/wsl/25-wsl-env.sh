@@ -44,6 +44,9 @@ if [ "$HAS_CHANGE" != "no" ]; then
 fi
 
 if [ -d "$WIN_GPG_AGENT_HOME" ]; then
+    # https://github.com/rupor-github/win-gpg-agent
+    # win-gpg-agent should be running first from windows
+
     # detect what we have
     if [ $(uname -a | grep -c "Microsoft") -eq 1 ]; then
         export ISWSL=1 # WSL 1
